@@ -1,18 +1,12 @@
-import fastify, { FastifyInstance } from 'fastify';
+import fastify from 'fastify';
+import { getOrders, getProducts } from './handlers';
 
-const app: FastifyInstance = fastify({ logger: true });
+export const app = fastify();
 
-app.get('/', (request, reply) => {
-  return { hello: 'world' };
+app.get('/', () => {
+  return { status: 'ok' };
 });
 
-const start = async () => {
-  try {
-    await app.listen({ port: 3000 });
-  } catch (err) {
-    app.log.error(err);
-    process.exit(1);
-  }
-};
+app.get('/products', getProducts);
 
-start();
+app.get('/orders', getOrders);

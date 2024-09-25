@@ -1,2 +1,15 @@
-# node-template
-Template for Node projects using Fastify 🐯
+# Mini-Rutter
+
+## Starting Guide
+
+### Install dependencies
+
+```bash
+yarn install
+```
+
+### Start project
+
+```bash
+yarn dev
+```
