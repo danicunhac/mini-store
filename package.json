@@ -9,7 +9,8 @@
   },
   "scripts": {
     "dev": "tsx watch index.ts",
-    "lint": "tsc && eslint \"src/**/*.{js,ts}\" --quiet --fix"
+    "lint": "tsc && eslint \"src/**/*.{js,ts}\" --quiet --fix",
+    "shopify:fetch-orders": "tsx src/scripts/shopify/fetchOrders.ts"
   },
   "devDependencies": {
     "@types/node": "^18.16.3",
