@@ -1,5 +1,5 @@
-import { supabase } from '../providers/supabase';
-import { Order } from '../types';
+import { supabase } from 'providers/supabase';
+import { Order } from 'types';
 
 export const fetchOrders = async (): Promise<Order[]> => {
   const { data, error } = await supabase.from('orders').select();

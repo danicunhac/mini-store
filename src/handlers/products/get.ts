@@ -1,16 +1,12 @@
-import { fetchProducts } from '../../gateways/product';
-import { FastifyHandler, GetProductsResponse } from '../../types';
+import { fetchProducts } from 'gateways/product';
 
-export const getProducts: FastifyHandler<GetProductsResponse> = async (
-  request,
-  reply
-) => {
+export const getProducts = async () => {
   try {
     const products = await fetchProducts();
 
-    return reply.send({ products });
+    return products;
   } catch (err) {
     console.error(err);
-    return reply.status(500).send(err);
+    return [];
   }
 };

@@ -1,5 +1,5 @@
-import { supabase } from '../providers/supabase';
-import { Product } from '../types';
+import { supabase } from 'providers/supabase';
+import { Product } from 'types';
 
 export const fetchProducts = async (): Promise<Product[]> => {
   const { data, error } = await supabase.from('products').select();
