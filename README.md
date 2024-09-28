@@ -19,3 +19,10 @@ yarn install
 ```bash
 yarn dev
 ```
+
+### Fill in the database
+
+```bash
+yarn shopify:fetch-products
+yarn shopify:fetch-orders
+```
